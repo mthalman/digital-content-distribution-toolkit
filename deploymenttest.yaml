@@ -11,13 +11,13 @@ spec:
     spec:
       containers:
       - name: aspnetapp
-        image: mcr.microsoft.com/dotnet/core/samples:aspnetapp
+        image: mcr.microsoft.com/dotnet/samples:aspnetapp
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         readinessProbe:
           httpGet:
             path: /
-            port: 80
+            port: 8080
           periodSeconds: 3
           timeoutSeconds: 1
